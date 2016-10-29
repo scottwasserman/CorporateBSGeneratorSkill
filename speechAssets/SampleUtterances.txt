@@ -1,0 +1,3 @@
+GenerateBSIntent to give me a quote
+GenerateBSIntent to make something up
+GenerateBSIntent to give me bs
