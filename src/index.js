@@ -124,9 +124,8 @@ Skill.prototype.intentHandlers = {
 };
 
 function handleHelpRequest(response) {
-    response.ask("Just say give me bs!");
+    response.ask("Hi. I'm a corporate B.S. Generator. I can give you an almost unlimited amount of corporate nonsense. Just say give me b.s.!");
 }
-
 
 function handleWGenerateBSRequest(response) { 
     var adverb = ADVERBS[Math.floor(Math.random() * ADVERBS.length)];

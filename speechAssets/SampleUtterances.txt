@@ -1,3 +1,7 @@
 GenerateBSIntent to give me a quote
+GenerateBSIntent to make up a quote
+GenerateBSIntent to give me some b.s.
+GenerateBSIntent to give me b.s.
+GenerateBSIntent give me b.s.
 GenerateBSIntent to make something up
-GenerateBSIntent to give me bs
+GenerateBSIntent that i want some b.s.

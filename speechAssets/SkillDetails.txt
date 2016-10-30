@@ -1,2 +1,19 @@
-Skill Name: Corporate BS Generator
-Invocation Name: corporate bs generator
+Skill Name: 
+Corporate B.S. Generator
+
+Invocation Name: 
+corporate b.s. generator
+
+Short Skill Description: 
+Create an awesome corporate catch phrase!
+
+Full Skill Description:
+Love corporate BS. This is the skill for you!  An almost unending number of stupid corporate quotes ala Dilbert.  It never gets old!
+
+Source for this skill and lamdba available at:
+http://github.com/scottwasserman
+
+Example Phrases:
+Alexa ask corporate b.s. generator to give me a quote
+Alexa tell corporate b.s. generator to give me some b.s.
+Alexa ask corporate b.s. generator to make up a quote
