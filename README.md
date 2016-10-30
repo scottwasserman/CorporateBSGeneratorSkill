@@ -8,12 +8,6 @@ http://www.atrixnet.com/bs-generator.html
 Thank you!
 
 ```
-/**
-    Copyright 2016 Scott L. Wasserman. All Rights Reserved.
-*/
-
-
-
 var ADVERBS = [
 'appropriately', 'assertively', 'authoritatively', 'collaboratively', 'compellingly', 'competently', 'completely',
 'continually', 'conveniently', 'credibly', 'distinctively', 'dramatically', 'dynamically', 'efficiently',
@@ -76,82 +70,5 @@ var NOUNS = [
 'testing procedures', 'total linkage', 'users', 'value', 'vortals', 'web-readiness', 'web services', 'fungibility',
 'clouds', 'nosql', 'storage', 'virtualization'
 ]
-
-/**
- * App ID for the skill
- */
-var APP_ID = undefined; //OPTIONAL: replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";
-
-/**
- * The AlexaSkill prototype and helper functions
- */
-var AlexaSkill = require('./AlexaSkill');
-
-var Skill = function () {
-    AlexaSkill.call(this, APP_ID);
-};
-
-// Extend AlexaSkill
-Skill.prototype = Object.create(AlexaSkill.prototype);
-Skill.prototype.constructor = Skill;
-
-Skill.prototype.eventHandlers.onSessionStarted = function (sessionStartedRequest, session) {
-    //console.log("onSessionStarted requestId: " + sessionStartedRequest.requestId + ", sessionId: " + session.sessionId);
-    // any initialization logic goes here
-};
-
-Skill.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
-    //console.log("onLaunch requestId: " + launchRequest.requestId + ", sessionId: " + session.sessionId);
-    handleHelpRequest(response);
-};
-
-/**
- * Overridden to show that a subclass can override this function to teardown session state.
- */
-Skill.prototype.eventHandlers.onSessionEnded = function (sessionEndedRequest, session) {
-    //console.log("onSessionEnded requestId: " + sessionEndedRequest.requestId + ", sessionId: " + session.sessionId);
-    // any cleanup logic goes here
-};
-
-Skill.prototype.intentHandlers = {
-    "GenerateBSIntent": function (intent, session, response) {
-        handleWGenerateBSRequest(response);
-    },
-
-    "AMAZON.HelpIntent": function (intent, session, response) {
-        handleHelpRequest(response);
-    },
-
-    "AMAZON.StopIntent": function (intent, session, response) {
-        var speechOutput = "Later";
-        response.tell(speechOutput);
-    },
-
-    "AMAZON.CancelIntent": function (intent, session, response) {
-        var speechOutput = "Later";
-        response.tell(speechOutput);
-    }
-};
-
-function handleHelpRequest(response) {
-    response.ask("I'm a corporate B.S. Generator never the same twice. Just say give me b.s.!");
-}
-
-function handleWGenerateBSRequest(response) { 
-    var adverb = ADVERBS[Math.floor(Math.random() * ADVERBS.length)];
-    var verb = VERBS[Math.floor(Math.random() * VERBS.length)];
-    var adjective = ADJECTIVES[Math.floor(Math.random() * ADJECTIVES.length)];
-    var noun = NOUNS[Math.floor(Math.random() * NOUNS.length)];
-
-    var statement = adverb + " " + verb + " " + adjective + " " + noun;
-    response.tell(statement);
-}
-
-// Create the handler that responds to the Alexa Request.
-exports.handler = function (event, context) {
-    // Create an instance of the SpaceGeek skill.
-    var skill = new Skill();
-    skill.execute(event, context);
-};
 
 ```
