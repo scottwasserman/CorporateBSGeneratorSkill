@@ -4,7 +4,8 @@ An Alexa Skill and Lambda to generate an unending amount of corporate bs
 
 
 Theses nouns, verbs, adverbs and adjectives were borrowed from:
-http://www.atrixnet.com/bs-generator.html # Thank you!
+http://www.atrixnet.com/bs-generator.html
+Thank you!
 
 ```
 var ADVERBS = [
