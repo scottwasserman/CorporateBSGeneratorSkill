@@ -1,6 +1,18 @@
 # Corporate BS Generator Skill
 An Alexa Skill and Lambda to generate an unending amount of corporate bs
 
+The inspiration for this skill came from my teammate at Stuzo, Aaron McLean.  He said why don't you build a skill that says random business related quotes. 
+
+The skill is pretty straight-forward.  It just takes a random adverb, verb, adjective and noun and makes a quote.
+
+```
+var adverb = ADVERBS[Math.floor(Math.random() * ADVERBS.length)];
+var verb = VERBS[Math.floor(Math.random() * VERBS.length)];
+var adjective = ADJECTIVES[Math.floor(Math.random() * ADJECTIVES.length)];
+var noun = NOUNS[Math.floor(Math.random() * NOUNS.length)];
+
+var statement = adverb + " " + verb + " " + adjective + " " + noun;
+ ```
 
 
 Theses nouns, verbs, adverbs and adjectives were borrowed from:
